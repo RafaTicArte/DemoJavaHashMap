@@ -33,5 +33,20 @@ public class Main {
         for(String key : students.keySet()){
             System.out.println(students.get(key).getName());
         }
+
+        // Crear un HashMap de estudiantes con objeto como clave
+        Map<Student, Student> students2 = new HashMap<>();
+
+        // Añadir estudiantes al HashMap
+        Student studentTmp2 = new Student("ZZZZZZZZ", "John", "Doe", 20);
+        students2.put(studentTmp2, studentTmp2);
+        studentTmp2 = new Student("YYYYYYY", "Louis", "Gil", 21);
+        students2.put(studentTmp2, studentTmp2);
+
+        // Mostrar el HashMap de estudiantes
+        System.out.println(students2);
+
+        // Mostrar las claves del HashMap
+        System.out.println(students2.keySet());
     }
 }
